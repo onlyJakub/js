@@ -1,0 +1,206 @@
+<html>
+  <head>
+
+    <title>Jakub Wojciechowicz 2P</title>
+
+    <style>
+
+      body {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          0deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      h1 {
+        font-size: 2cm;
+        color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      h2 {
+        color: white;
+      }
+
+      form {
+        margin: auto;
+        text-align: center;
+      }
+      
+      input {
+        margin: 15px;
+        padding: 30px;
+        font-size: 20px;
+        border-radius: 50%;
+        line-height: 200px;
+        border: solid 4px blue;
+        background-color: lightblue;
+        text-align: center;
+      }
+
+    </style>
+    <script language="JavaScript">
+      function WinOpen(page) {
+        const pages = {
+          z1: { url: "z1_wojc.html", name: "okienko_z1", width: 700, height: 500, top: 200, left: 200 },
+          z2: { url: "z2_wojc.html", name: "okienko_z2", width: 700, height: 500, top: 200, left: 200 },
+          z3: { url: "z3_wojc.html", name: "okienko_z3", width: 700, height: 500, top: 200, left: 200 },
+          z4: { url: "z4_wojc.html", name: "okienko_z4", width: 700, height: 500, top: 200, left: 400 },
+          z5: { url: "z5_wojc.html", name: "okienko_z5", width: 1300, height: 500, top: 200, left: 600 },
+          z7: { url: "z7_wojc.html", name: "okienko_z7", width: 1300, height: 500, top: 200, left: 600 },
+          z8: { url: "z8_wojc.html", name: "okienko_z8", width: 1300, height: 500, top: 200, left: 600 },
+          z9: { url: "z9_wojc.html", name: "okienko_z9", width: 1300, height: 500, top: 200, left: 600 },
+          z10: { url: "z10_wojc.html", name: "okienko_z10", width: 1300, height: 500, top: 200, left: 600 },
+          z11: { url: "z11_wojc.html", name: "okienko_z11", width: 1300, height: 500, top: 200, left: 600 },
+          z12: { url: "z12_wojc.html", name: "okienko_z12", width: 1300, height: 500, top: 200, left: 600 },
+          z13: { url: "z13_wojc.html", name: "okienko_z13", width: 1300, height: 500, top: 200, left: 600 },
+          z14: { url: "z14_wojc.html", name: "okienko_z14", width: 1300, height: 500, top: 200, left: 600 },
+          z15: { url: "z15_wojc.html", name: "okienko_z15", width: 1300, height: 500, top: 200, left: 600 },
+          z16: { url: "z16_wojc.html", name: "okienko_z16", width: 1300, height: 500, top: 200, left: 600 },
+          z17: { url: "z17_wojc.html", name: "okienko_z17", width: 1300, height: 500, top: 200, left: 600 },
+          z18: { url: "z18_wojc.html", name: "okienko_z18", width: 1300, height: 500, top: 200, left: 600 },
+          z19: { url: "z19_wojc.html", name: "okienko_z19", width: 1300, height: 500, top: 200, left: 600 },
+          z20: { url: "z20_wojc.html", name: "okienko_z20", width: 1300, height: 500, top: 200, left: 600 },
+          z21: { url: "z21_wojc.html", name: "okienko_z21", width: 1300, height: 500, top: 200, left: 600 },
+          z22: { url: "z22_wojc.html", name: "okienko_z22", width: 1300, height: 500, top: 200, left: 600 },
+          z23: { url: "z23_wojc.html", name: "okienko_z23", width: 1300, height: 500, top: 200, left: 600 },
+          z24: { url: "z24_wojc.html", name: "okienko_z24", width: 1300, height: 500, top: 200, left: 600 },
+          z25: { url: "z25_wojc.html", name: "okienko_z25", width: 1300, height: 500, top: 200, left: 600 },
+          z26: { url: "z26_wojc.html", name: "okienko_z26", width: 1300, height: 500, top: 200, left: 600 },
+          z27: { url: "z27_wojc.html", name: "okienko_z27", width: 1300, height: 500, top: 200, left: 600 },
+
+          z11_kod: { url: "z11_wojc_kod.html", name: "okienko_z11_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z12_kod: { url: "z12_wojc_kod.html", name: "okienko_z12_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z13_kod: { url: "z13_wojc_kod.html", name: "okienko_z13_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z14_kod: { url: "z14_wojc_kod.html", name: "okienko_z14_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z15_kod: { url: "z15_wojc_kod.html", name: "okienko_z15_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z16_kod: { url: "z16_wojc_kod.html", name: "okienko_z16_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z17_kod: { url: "z17_wojc_kod.html", name: "okienko_z17_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z18_kod: { url: "z18_wojc_kod.html", name: "okienko_z18_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z19_kod: { url: "z19_wojc_kod.html", name: "okienko_z19_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z20_kod: { url: "z20_wojc_kod.html", name: "okienko_z20_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z21_kod: { url: "z21_wojc_kod.html", name: "okienko_z21_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z22_kod: { url: "z22_wojc_kod.html", name: "okienko_z22_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z23_kod: { url: "z23_wojc_kod.html", name: "okienko_z23_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z24_kod: { url: "z24_wojc_kod.html", name: "okienko_z24_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z25_kod: { url: "z25_wojc_kod.html", name: "okienko_z25_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z26_kod: { url: "z26_wojc_kod.html", name: "okienko_z26_kod", width: 1300, height: 500, top: 200, left: 600 },
+          z27_kod: { url: "z27_wojc_kod.html", name: "okienko_z27_kod", width: 1300, height: 500, top: 200, left: 600 },
+        };
+  
+        const pageInfo = pages[page];
+        if (pageInfo) {
+          window.open(
+            pageInfo.url,
+            pageInfo.name,
+            `toolbar=no,directories=no,menubar=no,height=${pageInfo.height},width=${pageInfo.width},top=${pageInfo.top},left=${pageInfo.left}`
+          );
+        }
+      }
+  
+      function okno_zamknij() {
+        window.close();
+
+      }
+    </script>
+  </head>
+  <body>
+
+    <h1>
+      JavaScript Jakub Wojciechowicz klasa 2P
+    </h1>
+
+    <br />
+
+    <center><h2>Zadanie JavaScript</h2></center>
+
+    <form>
+      <script>
+
+        const zadania = [
+          { name: "zadanie1", value: "zadanie1-Wojciechowicz", onclick: "z1" },
+          { name: "zadanie2", value: "zadanie2-Wojciechowicz", onclick: "z2" },
+          { name: "zadanie3", value: "zadanie3-Wojciechowicz", onclick: "z3" },
+          { name: "zadanie4", value: "zadanie4-Wojciechowicz", onclick: "z4" },
+          { name: "zadanie5", value: "zadanie5-Wojciechowicz", onclick: "z5" },
+          { name: "zadanie7", value: "zadanie7-Wojciechowicz", onclick: "z7" },
+          { name: "zadanie8", value: "zadanie8-Wojciechowicz", onclick: "z8" },
+          { name: "zadanie9", value: "zadanie9-Wojciechowicz", onclick: "z9" },
+          { name: "zadanie10", value: "zadanie10-Wojciechowicz", onclick: "z10" },
+          { name: "zadanie11", value: "zadanie11-Wojciechowicz", onclick: "z11" },
+          { name: "zadanie12", value: "zadanie12-Wojciechowicz", onclick: "z12" },
+          { name: "zadanie13", value: "zadanie13-Wojciechowicz", onclick: "z13" },
+          { name: "zadanie14", value: "zadanie14-Wojciechowicz", onclick: "z14" },
+          { name: "zadanie15", value: "zadanie15-Wojciechowicz", onclick: "z15" },
+          { name: "zadanie16", value: "zadanie16-Wojciechowicz", onclick: "z16" },
+          { name: "zadanie17", value: "zadanie17-Wojciechowicz", onclick: "z17" },
+          { name: "zadanie18", value: "zadanie18-Wojciechowicz", onclick: "z18" },
+          { name: "zadanie19", value: "zadanie19-Wojciechowicz", onclick: "z19" },
+          { name: "zadanie20", value: "zadanie20-Wojciechowicz", onclick: "z20" },
+          { name: "zadanie21", value: "zadanie21-Wojciechowicz", onclick: "z21" },
+          { name: "zadanie22", value: "zadanie22-Wojciechowicz", onclick: "z22" },
+          { name: "zadanie23", value: "zadanie23-Wojciechowicz", onclick: "z23" },
+          { name: "zadanie24", value: "zadanie24-Wojciechowicz", onclick: "z24" },
+          { name: "zadanie25", value: "zadanie25-Wojciechowicz", onclick: "z25" },
+          { name: "zadanie26", value: "zadanie26-Wojciechowicz", onclick: "z26" },
+          { name: "zadanie27", value: "zadanie27-Wojciechowicz", onclick: "z27" },
+        ];
+
+        zadania.forEach(zadanie => {
+          const input = document.createElement("input");
+          input.type = "button";
+          input.name = zadanie.name;
+          input.value = zadanie.value;
+          input.onclick = () => WinOpen(zadanie.onclick);
+          document.querySelector("form").appendChild(input);
+        });
+
+      </script>
+
+      <h2>KOD HTML + JavaScript</h2>
+
+      <script>
+
+        const zadania_kod = [
+          { name: "zadanie11_kod", value: "zadanie11-Wojciechowicz", onclick: "z11_kod" },
+          { name: "zadanie12_kod", value: "zadanie12-Wojciechowicz", onclick: "z12_kod" },
+          { name: "zadanie13_kod", value: "zadanie13-Wojciechowicz", onclick: "z13_kod" },
+          { name: "zadanie14_kod", value: "zadanie14-Wojciechowicz", onclick: "z14_kod" },
+          { name: "zadanie15_kod", value: "zadanie15-Wojciechowicz", onclick: "z15_kod" },
+          { name: "zadanie16_kod", value: "zadanie16-Wojciechowicz", onclick: "z16_kod" },
+          { name: "zadanie17_kod", value: "zadanie17-Wojciechowicz", onclick: "z17_kod" },
+          { name: "zadanie18_kod", value: "zadanie18-Wojciechowicz", onclick: "z18_kod" },
+          { name: "zadanie19_kod", value: "zadanie19-Wojciechowicz", onclick: "z19_kod" },
+          { name: "zadanie20_kod", value: "zadanie20-Wojciechowicz", onclick: "z20_kod" },
+          { name: "zadanie21_kod", value: "zadanie21-Wojciechowicz", onclick: "z21_kod" },
+          { name: "zadanie22_kod", value: "zadanie22-Wojciechowicz", onclick: "z22_kod" },
+          { name: "zadanie23_kod", value: "zadanie23-Wojciechowicz", onclick: "z23_kod" },
+          { name: "zadanie24_kod", value: "zadanie24-Wojciechowicz", onclick: "z24_kod" },
+          { name: "zadanie25_kod", value: "zadanie25-Wojciechowicz", onclick: "z25_kod" },
+          { name: "zadanie26_kod", value: "zadanie26-Wojciechowicz", onclick: "z26_kod" },
+          { name: "zadanie27_kod", value: "zadanie27-Wojciechowicz", onclick: "z27_kod" },
+        ];
+
+        zadania_kod.forEach(zadanie => {
+          const input = document.createElement("input");
+          input.type = "button";
+          input.name = zadanie.name;
+          input.value = zadanie.value;
+          input.onclick = () => WinOpen(zadanie.onclick);
+          document.querySelector("form").appendChild(input);
+        });
+
+        const closeButton = document.createElement("input");
+        closeButton.type = "button";
+        closeButton.value = "zamknij okno";
+        closeButton.style.lineHeight = "100px";
+        closeButton.onclick = okno_zamknij;
+        document.querySelector("form").appendChild(closeButton);
+
+      </script>
+    </form>
+  </body>
+</html>

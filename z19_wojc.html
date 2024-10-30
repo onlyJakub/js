@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        function pole_wojc() {
+            let a_wojc = parseFloat(document.getElementById('dlugosc').value);
+            let b_wojc = a_wojc * a_wojc;
+            document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_wojc.toFixed(2) + " cm^2";
+        }
+        function obwod_wojc() {
+            let a_wojc = parseFloat(document.getElementById('dlugosc').value);
+            let b_wojc = 4 * a_wojc;
+            document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b_wojc.toFixed(2) + " cm";
+        }
+    </script>
+    <h1>Wszystko o KWADRACIE</h1><br><br>
+    <div><label>Podaj długość boku: </label><input type="text" id="dlugosc" placeholder="Podaj długość">
+         <label>cm</label><br><br><br></div>
+    <div>
+        <input type="button" name="pole" value="Oblicz pole" Onclick="pole_wojc()"><br><br>
+        <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_wojc()"><br><br>
+    </div>
+    <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+
+</html>
