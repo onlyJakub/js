@@ -1,0 +1,118 @@
+<html>
+  <head>
+
+    <title>Jakub Wojciechowicz 2P</title>
+
+    <style>
+
+      body {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          0deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      h1 {
+        font-size: 2cm;
+        color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      h2 {
+        color: white;
+      }
+
+      form {
+        margin: auto;
+        text-align: center;
+      }
+      
+      input {
+        margin: 15px;
+        padding: 30px;
+        font-size: 20px;
+        border-radius: 50%;
+        line-height: 200px;
+        border: solid 4px blue;
+        background-color: lightblue;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>
+      JavaScript Jakub Wojciechowicz klasa 2P
+    </h1>
+
+    <br />
+
+    <center><h2>Zadanie JavaScript</h2></center>
+
+    <form>
+      <script>
+
+        function okno_zamknij() {
+          window.close();
+
+        }
+
+        function WinOpen(page) {
+          window.open(
+            `./z${page}/z${page}_wojc.html`,
+            `okienko_z${page}_kod`,
+            `toolbar=no,directories=no,menubar=no,height=500,width=1300,top=200,left=600`
+          );
+        }
+
+
+        let html_files = 30;
+        for (let i = 1; i <= html_files; i++) {
+          console.log(`${i}`);
+          const input = document.createElement("input");
+          input.type = "button";
+          input.name = `zadanie${i}`;
+          input.value = `zadanie${i}-Wojciechowicz`;
+          input.onclick = () => WinOpen(`${i}`);
+          document.querySelector("form").appendChild(input);
+        }
+
+      </script>
+
+      <h2>KOD HTML + JavaScript</h2>
+
+      <script>
+        function WinOpenCode(page) {
+          window.open(
+            `./z${page}/z${page}_wojc_kod.html`,
+            `okienko_z${page}_kod`,
+            `toolbar=no,directories=no,menubar=no,height=500,width=1300,top=200,left=600`
+          );
+        }
+
+        zadania_kod = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+
+        zadania_kod.forEach(zadanie => {
+          const input = document.createElement("input");
+          input.type = "button";
+          input.name = `zadanie${zadanie}_kod`;
+          input.value = `zadanie${zadanie}-Wojciechowicz`;
+          input.onclick = () => WinOpenCode(zadanie);
+          document.querySelector("form").appendChild(input);
+        })
+
+        const closeButton = document.createElement("input");
+        closeButton.type = "button";
+        closeButton.value = "zamknij okno";
+        closeButton.style.lineHeight = "100px";
+        closeButton.onclick = okno_zamknij;
+        document.querySelector("form").appendChild(closeButton);
+
+      </script>
+    </form>
+  </body>
+</html>

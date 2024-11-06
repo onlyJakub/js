@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_siejka() {
+        window.close();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>KOD HTML I javascript</h1>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div style="color: khaki; font-size: 50px"></div>
+    <div id="string"></div>
+
+    <script language="JavaScript">
+      const x1woj = +prompt("x1=");
+      const x2woj = +prompt("x2=");
+
+      const { length: nameLength } = "Jakub";
+
+      const x1_rad = (x1woj * Math.PI) / 180;
+
+      const y1 = (3 * x1woj * nameLength) / (nameLength + 2);
+      const y2 = 2 * Math.cos(x1_rad) + 3 * Math.sin(x1_rad);
+      const y3 =
+        Math.cbrt(Math.pow(x1woj, 5) + 2 * Math.pow(x2woj, 4)) *
+        Math.abs(x1woj - x2woj);
+
+      document.write(
+        [
+          `x1 - ${x1woj}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2 - ${x2woj}`,
+          `x1 - ${x1woj}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1 - ${x1_rad.toFixed(
+            2
+          )}`,
+          `y1 - ${y1.toFixed(2)} `,
+          `y2 - ${y2.toFixed(2)} `,
+          `y3 - ${y3.toFixed(2)} `,
+        ].join("<br>")
+      );
+    </script>
+  </body>
+</html>

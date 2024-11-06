@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div style="color:navy;font-size:50px;">
+        <script language="JavaScript">
+            var a = parseFloat(prompt("a=", ""));
+            var b = parseFloat(prompt("b=", ""));
+            function suma_wojc(a, b) {
+                return a + b;
+            }
+            function roznica_wojc(a, b) {
+                return a - b;
+            }
+            function mnozenie_wojc(a, b) {
+                return a * b;
+            }
+            function do_kwadratu_wojc(a) {
+                return a * a;
+            }
+            document.write("suma=" + suma_wojc(a, b) + "<br>");
+            document.write("różnica=" + roznica_wojc(a, b) + "<br>");
+            document.write("mnozenie=" + mnozenie_wojc(a, b) + "<br>");
+            document.write("kwadrat=" + do_kwadratu_wojc(a) + " , " + do_kwadratu_ber(b) + "<br>");
+        </script>
+    </div>
+</body>
+</html>

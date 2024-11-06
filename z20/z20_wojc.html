@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Calculator</title>
+</head>
+<body>
+    <script>
+        const ax = parseFloat(prompt("X for A: "));
+        const ay = parseFloat(prompt("Y for A: "));
+        const bx = parseFloat(prompt("X for B: "));
+        const by = parseFloat(prompt("Y for B: "));
+        const cx = parseFloat(prompt("X for C: "));
+        const cy = parseFloat(prompt("Y for C: "));
+
+        function calculateDistance(x1, y1, x2, y2) {
+            const dx = x1 - x2;
+            const dy = y1 - y2;
+            return Math.hypot(dx, dy).toFixed(2);
+        }
+
+        document.write(`Distance AB: ${calculateDistance(ax, ay, bx, by)}<br>`);
+        document.write(`Distance BC: ${calculateDistance(bx, by, cx, cy)}<br>`);
+        document.write(`Distance AC: ${calculateDistance(ax, ay, cx, cy)}<br>`);
+        
+    </script>
+</body>
+</html>

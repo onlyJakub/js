@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../zadania.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Obliczenia</h1>
+        <form id="calculationForm">
+            <label for="odl_wojc">Odległość:</label>
+            <input type="number" id="odl_wojc" name="odl_wojc" required>
+            
+            <label for="kat_wojc">Kąt startu:</label>
+            <input type="number" id="kat_wojc" name="kat_wojc" required>
+            
+            <label for="s_wojc">Droga:</label>
+            <input type="number" id="s_wojc" name="s_wojc" required>
+            
+            <button type="button" onclick="calculate()">Oblicz</button>
+        </form>
+        
+        <h2>Wyniki:</h2>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            const odl_wojc = parseFloat(document.getElementById('odl_wojc').value);
+            const kat_wojc = parseFloat(document.getElementById('kat_wojc').value);
+            const s_wojc = parseFloat(document.getElementById('s_wojc').value);
+
+            if (isNaN(odl_wojc) || isNaN(kat_wojc) || isNaN(s_wojc)) {
+                document.getElementById('result').innerText = 'Proszę wprowadzić poprawne wartości.';
+                return;
+            }
+
+            const radian = kat_wojc * (Math.PI / 180);
+            const h_wojc = s_wojc * Math.sin(radian);
+            const kat_startu = Math.atan(h_wojc / odl_wojc) * (180 / Math.PI);
+
+            document.getElementById('result').innerText = `Wysokość: ${h_wojc.toFixed(2)}\nKąt startu: ${kat_startu.toFixed(2)}°`;
+        }
+    </script>
+</body>
+</html>

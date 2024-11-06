@@ -1,0 +1,33 @@
+  <html>
+  <head>
+    <link rel="stylesheet" href="../zadania.css">
+    <script type="text/javascript">
+      let monitor = {
+        marka: "Samsung",
+        model: "Odyssey ARK",
+        rozdzielczosc: "3840 x 2160",
+        Częstotliwość_odświeżania: "165hz",
+        Przekątna: "55 cali",
+        
+        pokaz: function () {
+          document.getElementsByClassName('container').innerHTML += `Marka: ${this.marka} <br/>
+                                                                     Model: ${this.model} <br/>
+                                                                     Rozdzielczość: ${this.rozdzielczosc} <br/>`
+        },
+      };
+      czlowiek.pokaz();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+    <br />
+    Programowanie obiektowe. <br />
+    Obiekt to człowiek<br />
+    Pola:<br />
+    Nazwisko<br />
+    imie<br />
+    zawod<br />
+    metoda: pokaz<br />
+  </body>
+</div>
+</html>

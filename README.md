@@ -1,2 +1,2 @@
 # js
-JS page
+my first javascript page
